@@ -1,0 +1,58 @@
+@import compass/css3
+
+.row:first-child
+	margin-top: 70px
+
+$primary: #313131
+
+.navbar-inner
+	background: $primary
+
+.navbar
+	.brand
+		color: white
+		text-shadow: none
+		background: darken($primary, 5%)
+		+transition-duration(.5s)
+		+transition-property(all)
+		+transition-timing-function(all)
+		&:hover
+			background: black
+			color: white
+	.nav
+		> li
+			> a
+				@extend .brand
+
+.btn-mini
+	margin: .5em 0
+
+.table
+	td
+		border-right: 1px solid ligthen(gray, 40%)
+		&:last-child
+			border-left: 0
+
+.form-horizontal
+	padding: 20px 0
+	background: lighten(gray, 48%)
+
+.sidebar-nav
+	position: fixed
+	margin: 1em 0
+	h3
+		position: absolute
+		top: 0
+		color: white
+		width: 100%
+		left: 0
+		font-size: 1.2em
+		background: $primary
+		margin: 0
+		padding: 0
+		text-align: center
+		+border-top-left-radius(4px)
+		+border-top-right-radius(4px)
+	.nav-list
+		overflow: hidden
+		margin: 2em 0
